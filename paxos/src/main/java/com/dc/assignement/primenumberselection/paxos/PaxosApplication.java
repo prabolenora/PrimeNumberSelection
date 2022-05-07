@@ -102,7 +102,9 @@ public class PaxosApplication {
 						System.out.println("Election is completed.");
 						masterWorks();
 					} else {
-						serviceController.election(nodeList);
+						Bully.setCoordinator(false);
+						Bully.setElection(true);
+						//serviceController.election(nodeList);
 					}
 
 					System.out.println("************************************");
@@ -114,7 +116,15 @@ public class PaxosApplication {
 			System.out.println(e);
 		}
 	}
-
+	
+	public static void selectCoordinator() {
+		try {
+			
+		}catch(Exception e) {
+			
+		}
+	}
+	
 	public static void masterWorks() {
 		try {
 			MasterController master=new MasterController();

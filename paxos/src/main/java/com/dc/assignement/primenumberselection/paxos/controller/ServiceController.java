@@ -17,7 +17,7 @@ import com.dc.assignement.primenumberselection.paxos.model.Node;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class ServiceController {
-	// # This method is used to register the service in the service registry
+	// This method is used to register the service in the service registry
 	public int registerPort() {
 		int returnval = 404;
 		try {
